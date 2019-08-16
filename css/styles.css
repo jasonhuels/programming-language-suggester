@@ -1,0 +1,18 @@
+.question {
+  padding: 20px;
+}
+
+#submit {
+  margin-left: 50%;
+  margin-right: 50%;
+}
+
+form {
+  padding-left: 20px;
+}
+
+.container {
+  padding-bottom: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
