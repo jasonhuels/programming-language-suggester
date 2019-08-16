@@ -14,7 +14,7 @@ $(function() {
     var cSharp = 0;
     var machine = 0;
 
-    $(".result").hide();
+    $(".result").fadeOut();
     $("#plural").hide();
 
     for(let i=0; i<responses.length; i++) {
@@ -33,33 +33,33 @@ $(function() {
     }
 
     if(python > js && python > cSharp && python > machine) {
-      $(".python").show();
-      $(".results").show();
+      $(".python").fadeIn();
+      $(".results").fadeIn();
     } else if(js > python && js > cSharp && js > machine) {
-      $(".javascript").show();
-      $(".results").show();
+      $(".javascript").fadeIn();
+      $(".results").fadeIn();
     } else if(cSharp > python && cSharp > js && cSharp > machine){
-      $(".c-sharp").show();
-      $(".results").show();
+      $(".c-sharp").fadeIn();
+      $(".results").fadeIn();
     } else if(machine > python && machine > js && machine > cSharp){
-      $(".machine").show();
-      $(".results").show();
+      $(".machine").fadeIn();
+      $(".results").fadeIn();
     } else {
       $(".results #plural").show();
       $(".results #results").text("");
       if(python === Math.max(python, js, cSharp, machine)) {
-        $(".python").show();
+        $(".python").fadeIn();
       }
       if(js === Math.max(python, js, cSharp, machine)) {
-        $(".javascript").show();
+        $(".javascript").fadeIn();
       }
       if(cSharp === Math.max(python, js, cSharp, machine)) {
-        $(".c-sharp").show();
+        $(".c-sharp").fadeIn();
       }
       if(machine === Math.max(python, js, cSharp, machine)) {
-        $(".machine").show();
+        $(".machine").fadeIn();
       }
-      $(".results").show();
+      $(".results").fadeIn();
     }
 
     $("body").css("border-color", favoriteColor);
