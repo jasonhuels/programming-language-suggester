@@ -10,6 +10,7 @@ $(function() {
     var js = 0;
     var python = 0;
     var cSharp = 0;
+    var machine = 0;
 
     $(".result").hide();
     $("#plural").hide();
@@ -24,28 +25,37 @@ $(function() {
       if(responses[i].includes("c#")) {
         cSharp++;
       }
+      if(responses[i].includes("machine")) {
+        machine++;
+      }
     }
 
-    if(python > js && python > cSharp) {
+    if(python > js && python > cSharp && python > machine) {
       $(".python").show();
       $(".results").show();
-    } else if(js > python && js > cSharp) {
+    } else if(js > python && js > cSharp && js > machine) {
       $(".javascript").show();
       $(".results").show();
-    } else if(cSharp > python && cSharp > js){
+    } else if(cSharp > python && cSharp > js && cSharp > machine){
       $(".c-sharp").show();
+      $(".results").show();
+    } else if(machine > python && machine > js && machine > cSharp){
+      $(".machine").show();
       $(".results").show();
     } else {
       $(".results #plural").show();
       $(".results #results").text("");
-      if(python === Math.max(python, js, cSharp)) {
+      if(python === Math.max(python, js, cSharp, machine)) {
         $(".python").show();
       }
-      if(js === Math.max(python, js, cSharp)) {
+      if(js === Math.max(python, js, cSharp, machine)) {
         $(".javascript").show();
       }
-      if(cSharp === Math.max(python, js, cSharp)) {
+      if(cSharp === Math.max(python, js, cSharp, machine)) {
         $(".c-sharp").show();
+      }
+      if(machine === Math.max(python, js, cSharp, machine)) {
+        $(".machine").show();
       }
       $(".results").show();
     }
