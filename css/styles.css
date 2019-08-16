@@ -17,6 +17,7 @@ h1 {
   text-align: center;
   text-decoration: underline;
   text-decoration-style:  double;
+  text-shadow: 2px 2px grey
 }
 
 .container {
@@ -24,7 +25,7 @@ h1 {
   padding-left: 50px;
   padding-right: 50px;
   border: solid black 25px;
-  background-color: white;
+  background-color: #fafafa;
   width: auto;
 }
 
@@ -42,23 +43,28 @@ body {
 
 footer {
   text-align: right;
-  font-size: 10px;
-}
-
-.c-sharp img {
-  width: 40%;
 }
 
 .result img {
   margin-left: auto;
   margin-right: auto;
   display: block;
-  padding: 20px;
+  border: solid black 5px;
+  border-radius: 10px;
+  box-shadow: 5px 10px;
+}
+
+.c-sharp img {
+  width: 40%;
+  border: none;
+  box-shadow: none;
 }
 
 .result {
   border: solid black 5px;
   margin-top: 10px;
+  background-color: lightgrey;
+  box-shadow: 5px 5px;
 }
 
 .result p {
@@ -67,4 +73,9 @@ footer {
 
 .col-md-6 {
   padding: 100px;
+}
+
+h3 {
+  font-family: monospace;
+  font-size: 30px;
 }
