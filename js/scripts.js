@@ -13,6 +13,7 @@ $(function() {
     var python = 0;
     var cSharp = 0;
     var machine = 0;
+    var java = 0;
 
     $(".result").fadeOut();
     $("#plural").hide();
@@ -30,34 +31,43 @@ $(function() {
       if(responses[i].includes("machine")) {
         machine++;
       }
+      if(responses[i].includes("java")) {
+        java++;
+      }
     }
 
-    if(python > js && python > cSharp && python > machine) {
+    if(python > js && python > cSharp && python > machine && python > java) {
       $(".python").fadeIn();
       $(".results").fadeIn();
-    } else if(js > python && js > cSharp && js > machine) {
+    } else if(js > python && js > cSharp && js > machine && js > java) {
       $(".javascript").fadeIn();
       $(".results").fadeIn();
-    } else if(cSharp > python && cSharp > js && cSharp > machine){
+    } else if(cSharp > python && cSharp > js && cSharp > machine && cSharp > java){
       $(".c-sharp").fadeIn();
       $(".results").fadeIn();
-    } else if(machine > python && machine > js && machine > cSharp){
+    } else if(machine > python && machine > js && machine > cSharp && machine > java){
       $(".machine").fadeIn();
+      $(".results").fadeIn();
+    } else if(java > python && java > js && java > cSharp && java > java){
+      $(".java").fadeIn();
       $(".results").fadeIn();
     } else {
       $(".results #plural").show();
       $(".results #results").text("");
-      if(python === Math.max(python, js, cSharp, machine)) {
+      if(python === Math.max(python, js, cSharp, machine, java)) {
         $(".python").fadeIn();
       }
-      if(js === Math.max(python, js, cSharp, machine)) {
+      if(js === Math.max(python, js, cSharp, machine, java)) {
         $(".javascript").fadeIn();
       }
-      if(cSharp === Math.max(python, js, cSharp, machine)) {
+      if(cSharp === Math.max(python, js, cSharp, machine, java)) {
         $(".c-sharp").fadeIn();
       }
-      if(machine === Math.max(python, js, cSharp, machine)) {
+      if(machine === Math.max(python, js, cSharp, machine, java)) {
         $(".machine").fadeIn();
+      }
+      if(java === Math.max(python, js, cSharp, machine, java)) {
+        $(".java").fadeIn();
       }
       $(".results").fadeIn();
     }
