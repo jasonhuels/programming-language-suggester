@@ -11,12 +11,31 @@ form {
   padding-left: 20px;
 }
 
+h1 {
+  font-family: cursive;
+  font-size: 50px;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-style:  double;
+}
+
 .container {
   padding-bottom: 50px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border: solid black 25px;
+  background-color: white;
+  width: auto;
 }
 
 .results {
   display: none;
+}
+
+#plural {
+  display: none;
+}
+
+body {
+  border: solid lightgrey 50px;
 }
