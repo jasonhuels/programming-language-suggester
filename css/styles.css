@@ -8,8 +8,6 @@
   border: solid black 2px;
   color: #fafafa;
   font-family: monospace;
-  padding: 15px 32px;
-  text-align: center;
   text-decoration: underline;
   font-size: 20px;
   cursor: pointer;
@@ -26,6 +24,15 @@ h1 {
   text-decoration: underline;
   text-decoration-style:  double;
   text-shadow: 2px 2px grey
+}
+
+h3 {
+  font-family: monospace;
+  font-size: 30px;
+}
+
+h4 {
+  font-weight: bold;
 }
 
 .container {
@@ -82,15 +89,6 @@ footer {
 
 .col-md-6 {
   padding: 100px;
-}
-
-h3 {
-  font-family: monospace;
-  font-size: 30px;
-}
-
-h4 {
-  font-weight: bold;
 }
 
 .well {
