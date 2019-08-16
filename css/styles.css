@@ -3,8 +3,16 @@
 }
 
 #submit {
-  margin-left: 50%;
-  margin-right: 50%;
+  margin-left: 45%;
+  background-color: #383838;
+  border: solid black 2px;
+  color: #fafafa;
+  font-family: monospace;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 form {
@@ -39,6 +47,7 @@ h1 {
 
 body {
   border: solid lightgrey 50px;
+  font-size: 16px;
 }
 
 footer {
@@ -78,6 +87,10 @@ footer {
 h3 {
   font-family: monospace;
   font-size: 30px;
+}
+
+h4 {
+  font-weight: bold;
 }
 
 .well {

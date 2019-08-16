@@ -6,6 +6,7 @@ $(function() {
     responses[2] = $("input:radio[name=code]:checked").val();
     responses[3] = $("#punctuation").val();
     responses[4] = $("#whitespace").val();
+    responses[5] = $("input:radio[name=IorC]:checked").val();
 
     var favoriteColor = $("#color").val();
     var js = 0;
