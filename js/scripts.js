@@ -38,7 +38,19 @@ $(function() {
     } else if(cSharp > python && cSharp > js){
       $(".results").text("C#");
       $(".results").show();
+    } else {
+      if(python === Math.max(python, js, cSharp)) {
+        $(".results").append("Python");
+      }
+      if(js === Math.max(python, js, cSharp)) {
+        $(".results").append("JavaScript");
+      }
+      if(cSharp === Math.max(python, js, cSharp)) {
+        $(".results").append("C#");
+      }
+      $(".results").show();
     }
+    console.log(favoriteColor);
 
     event.preventDefault();
   });
