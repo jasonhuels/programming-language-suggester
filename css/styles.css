@@ -16,3 +16,7 @@ form {
   padding-left: 25px;
   padding-right: 25px;
 }
+
+.results {
+  display: none;
+}

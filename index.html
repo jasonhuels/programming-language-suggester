@@ -13,40 +13,39 @@
       <form class="questionaire" action="index.html" method="post">
 
         <div class="question">
-          <h4>Do you prefer loosely typed language or strictly typed languages?</h4>
-          <div class="radio">
-            <label>
-              <input type="radio" name="types" value="loose" checked>
-              Loosely typed
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="types" value="strict">
-              Strictly typed
-            </label>
-          </div>
-        </div>
-
-
-        <div class="question">
           <div class="radio">
             <h4>Why are you interested in programming?</h4>
             <label>
-              <input type="radio" name="interest" value="loose" checked>
+              <input type="radio" name="interest" value="js" checked>
               I want to make cool interactive websites.
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="interest" value="strict">
+              <input type="radio" name="interest" value="c#">
               I want to make useful applications.
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="interest" value="strict">
+              <input type="radio" name="interest" value="python">
               I want to make the big bucks!
+            </label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h4>Do you prefer loosely typed language or strictly typed languages?</h4>
+          <div class="radio">
+            <label>
+              <input type="radio" name="types" value="js python" checked>
+              Loosely typed
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="types" value="c#">
+              Strictly typed
             </label>
           </div>
         </div>
@@ -55,19 +54,19 @@
           <h4>Which block of code makes the most sense to you?</h4>
           <div class="radio">
             <label>
-              <input type="radio" name="code" value="loose" checked>
+              <input type="radio" name="code" value="python" checked>
               <pre>print("Hello, World!")</pre>
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="code" value="strict">
+              <input type="radio" name="code" value="js">
               <pre>console.log("Hello, World!");</pre>
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="code" value="strict">
+              <input type="radio" name="code" value="c#">
               <pre>using System; <br>namespace HelloWorld <br>{ <br>  class Hello <br>  { <br>    static void Main() <br>    { <br>       Console.WriteLine("Hello World!"); <br>    }<br>  }<br>}</pre>
 
             </label>
@@ -77,9 +76,9 @@
         <div class="question">
           <h4>How often do you forget semicolons and brackets</h4>
           <select class="form-control" id="punctuation">
-            <option>Constantly</option>
-            <option>Rarely</option>
-            <option>Never</option>
+            <option value="python">Constantly</option>
+            <option value="js">Rarely</option>
+            <option value="c#">Never</option>
           </select>
         </div>
 
