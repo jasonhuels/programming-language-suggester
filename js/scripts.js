@@ -15,7 +15,7 @@ $(function() {
     var machine = 0;
     var java = 0;
 
-    $(".result").fadeOut();
+    $(".result").hide();
     $("#plural").hide();
 
     for(let i=0; i<responses.length; i++) {
@@ -38,22 +38,16 @@ $(function() {
 
     if(python > js && python > cSharp && python > machine && python > java) {
       $(".python").fadeIn();
-      $(".results").fadeIn();
     } else if(js > python && js > cSharp && js > machine && js > java) {
       $(".javascript").fadeIn();
-      $(".results").fadeIn();
     } else if(cSharp > python && cSharp > js && cSharp > machine && cSharp > java){
       $(".c-sharp").fadeIn();
-      $(".results").fadeIn();
     } else if(machine > python && machine > js && machine > cSharp && machine > java){
       $(".machine").fadeIn();
-      $(".results").fadeIn();
     } else if(java > python && java > js && java > cSharp && java > java){
       $(".java").fadeIn();
-      $(".results").fadeIn();
     } else {
       $(".results #plural").show();
-      $(".results #results").text("");
       if(python === Math.max(python, js, cSharp, machine, java)) {
         $(".python").fadeIn();
       }
@@ -69,9 +63,8 @@ $(function() {
       if(java === Math.max(python, js, cSharp, machine, java)) {
         $(".java").fadeIn();
       }
-      $(".results").fadeIn();
     }
-
+    $(".results").show();
     $("body").css("border-color", favoriteColor);
 
     event.preventDefault();
