@@ -78,6 +78,7 @@ footer {
 }
 
 .result {
+  display: none;
   border: solid black 5px;
   margin-top: 10px;
   background-color: lightgrey;

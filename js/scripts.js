@@ -15,7 +15,7 @@ $(function() {
     var machine = 0;
     var java = 0;
 
-    $(".result").hide();
+    $(".result").fadeOut();
     $("#plural").hide();
 
     for(let i=0; i<responses.length; i++) {
@@ -44,7 +44,7 @@ $(function() {
       $(".c-sharp").fadeIn();
     } else if(machine > python && machine > js && machine > cSharp && machine > java){
       $(".machine").fadeIn();
-    } else if(java > python && java > js && java > cSharp && java > java){
+    } else if(java > python && java > js && java > cSharp && java > machine){
       $(".java").fadeIn();
     } else {
       $(".results #plural").show();
@@ -64,7 +64,7 @@ $(function() {
         $(".java").fadeIn();
       }
     }
-    $(".results").show();
+    $(".results").fadeIn();
     $("body").css("border-color", favoriteColor);
 
     event.preventDefault();
